@@ -1,5 +1,6 @@
 package ex3;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Zoo {
@@ -11,6 +12,9 @@ public class Zoo {
 
     public Zoo(String nom) {
         this.nom = nom;
+        this.types = new ArrayList<>();
+        this.noms = new ArrayList<>();
+        this.comportements = new ArrayList<>();
     }
 
     public void addAnimal(String nomAnimal, String typeAnimal, String comportement) {
