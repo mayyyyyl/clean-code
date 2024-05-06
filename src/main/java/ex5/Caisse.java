@@ -55,4 +55,20 @@ public class Caisse {
         this.items = items;
     }
 
+    /**
+     * Cette méthode retourne true si le nom et le poids correspondent
+     *
+     * @param item the item to accept
+     */
+    public boolean accepte(Item item) {
+
+        if (nom.equals("Petits objets") && item.getPoids() < 5) {
+            return true;
+        } else if (nom.equals("Moyens objets") && item.getPoids() >= 5 && item.getPoids() <= 20) {
+            return true;
+        } else if (nom.equals("Grands objets") && item.getPoids() >= 20) {
+            return true;
+        }
+        return false;
+    }
 }
